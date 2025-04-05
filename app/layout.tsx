@@ -14,6 +14,17 @@ export default function RootLayout({
  const pathname = usePathname();
  return (
   <html lang="en">
+   <head>
+    <title>Sellaris</title>
+    <meta
+     name="viewport"
+     content="width=device-width, initial-scale=1"
+    />
+    <link
+     rel="stylesheet"
+     href="/favicon.ico"
+    />
+   </head>
    <body>
     <SessionProvider>
      {!disableHeader.includes(pathname) && <Header />}

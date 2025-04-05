@@ -8,9 +8,8 @@ export default function Header() {
  const {data: session, status}: {data: any; status: string} = useSession();
  return (
   <header className="sticky z-10 top-0 p-5 px-10 flex items-center justify-between bg-slate-800 text-white">
-    
    <button className="text-2xl font-bold italic">
-    <Link href="/">Sellaris</Link>
+    <Link href="/">SELLARIS</Link>
    </button>
 
    <div className="flex items-center justify-center gap-5">
