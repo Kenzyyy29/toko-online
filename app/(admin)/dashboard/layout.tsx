@@ -1,3 +1,5 @@
+import Sidebar from "@/components/ui/Sidebar";
+
 export default function Layout({
  children,
  products,
@@ -10,13 +12,16 @@ export default function Layout({
  payments: React.ReactNode;
 }) {
  return (
-  <div className="p-5">
-   <div>{children}</div>
-   <div className="flex  mt-5 justify-center items-center ">
-    {products}
-    {analytics}
+  <div className="flex">
+   <Sidebar />
+   <div className="flex flex-col w-full p-5 ml-64">
+    <div>{children}</div>
+    <div className="flex  mt-5 justify-center items-center ">
+     {products}
+     {analytics}
+    </div>
+    {payments}
    </div>
-   {payments}
   </div>
  );
 }

@@ -1,10 +1,10 @@
 "use client";
 import {usePathname} from "next/navigation";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/ui/Header";
 import {SessionProvider} from "next-auth/react";
 
-const disableHeader = ["/sign-in", "/sign-up"];
+const disableHeader = ["/sign-in", "/sign-up", "/dashboard"];
 
 export default function RootLayout({
  children,

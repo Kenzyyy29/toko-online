@@ -24,8 +24,8 @@ const authOptions: NextAuthOptions = {
     };
     const user: any = await login({email});
     if (user) {
-     const passowordConfirm = await compare(password, user.password);
-     if (passowordConfirm) {
+     const passwordConfirm = await compare(password, user.password);
+     if (passwordConfirm) {
       return user;
      }
      return null;
