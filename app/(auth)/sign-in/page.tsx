@@ -8,11 +8,11 @@ import {useState} from "react";
 export default function SignIn() {
  const {push} = useRouter();
  const [error, setError] = useState("");
- const [isLoading, setIsLoading] = useState(false)
+ const [isLoading, setIsLoading] = useState(false);
  const handleLogin = async (e: any) => {
   e.preventDefault();
   setError("");
-  setIsLoading(true)
+  setIsLoading(true);
   try {
    const res = await signIn("credentials", {
     redirect: false,
@@ -21,8 +21,8 @@ export default function SignIn() {
     callbackUrl: "/dashboard",
    });
    if (!res?.error) {
-    e.target.reset()
-    setIsLoading(false)
+    e.target.reset();
+    setIsLoading(false);
     push("/dashboard");
    } else {
     setIsLoading(false);
